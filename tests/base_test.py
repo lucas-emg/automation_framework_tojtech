@@ -6,8 +6,6 @@ from test_classes.misc.webdriver_factory import webdriver_factory
 class BaseTest(unittest.TestCase):
     driver: WebDriver
 
-    # ADDING A COMMENT HERE JUST TO SHOW THAT I CAN CHANGE THINGS IN THE MAIN BRANCH
-
     def setUp(self) -> None:
         self.driver = webdriver_factory(browser="Chrome")
         self.driver.get("https://shopping.beeyor.com/")
