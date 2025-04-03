@@ -7,6 +7,7 @@ class BaseTest(unittest.TestCase):
     driver: WebDriver
 
     # Add another comment
+    # Donald Trump was here
 
     def setUp(self) -> None:
         self.driver = webdriver_factory(browser="Chrome")
