@@ -7,7 +7,7 @@ class BaseTest(unittest.TestCase):
     driver: WebDriver
 
     # Add another comment
-
+    # THIS WILL CAUSE A CONFLICT!!!!!
     def setUp(self) -> None:
         self.driver = webdriver_factory(browser="Chrome")
         self.driver.get("https://shopping.beeyor.com/")
