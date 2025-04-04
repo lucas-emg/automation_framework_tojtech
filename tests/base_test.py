@@ -7,6 +7,8 @@ class BaseTest(unittest.TestCase):
     driver: WebDriver
 
     # Add another comment
+    # This will cause conflict
+    #
 
     def setUp(self) -> None:
         self.driver = webdriver_factory(browser="Chrome")
@@ -16,4 +18,5 @@ class BaseTest(unittest.TestCase):
     def tearDown(self) -> None:
         self.driver.quit()
 
-    # Please review my code
+
+        # lease review my code
