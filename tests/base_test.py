@@ -7,6 +7,7 @@ class BaseTest(unittest.TestCase):
     driver: WebDriver
 
     # Add another comment
+    # THIS WILL CAUSE A CONFLICT!!!!!
     # This will cause conflict
     #
 
@@ -17,6 +18,3 @@ class BaseTest(unittest.TestCase):
 
     def tearDown(self) -> None:
         self.driver.quit()
-
-
-        # lease review my code
