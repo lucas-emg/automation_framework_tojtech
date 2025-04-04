@@ -8,6 +8,9 @@ class BaseTest(unittest.TestCase):
 
     # Add another comment
     # THIS WILL CAUSE A CONFLICT!!!!!
+    # This will cause conflict
+    #
+
     def setUp(self) -> None:
         self.driver = webdriver_factory(browser="Chrome")
         self.driver.get("https://shopping.beeyor.com/")

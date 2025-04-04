@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from test_classes.misc.locator import Locator
 
 #Hello, team!
-#Hi there!
+#Hello, Hello!
 
 class BasePage:
 
