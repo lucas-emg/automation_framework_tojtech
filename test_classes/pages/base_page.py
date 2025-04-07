@@ -15,6 +15,13 @@ class BasePage:
         element = self.driver.find_element(locator.by, locator.value)
         element.click()
 
+    def click_and_wait(self, locator: Locator, timeout: int) -> None:
+        element = WebDriverWait(self.driver, timeout=timeout).until(ec.visibility_of_element_located((locator.by, locator.value)))
+        element.click()
+
+    def wait_for_element_to_be_clickable(self, locator: Locator, timeout: int) -> None:
+        WebDriverWait(self.driver, timeout=timeout).until(ec.element_to_be_clickable((locator.by, locator.value)))
+
     def input(self, locator: Locator, text: str) -> None:
         element = self.driver.find_element(locator.by, locator.value)
         element.send_keys(text)
