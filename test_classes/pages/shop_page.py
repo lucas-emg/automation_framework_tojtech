@@ -9,6 +9,7 @@ class ShopPage(BasePage):
     shop_page_header_locator = Locator(by=By.XPATH, value="//h1[text()='Shop']")
     cool_bug_product_locator = Locator(by=By.XPATH, value="//a[@href='?add-to-cart=1681']")
     cool_bug_view_cart_locator = Locator(by=By.XPATH, value="//a[@href='?add-to-cart=1681']/following-sibling::*[1]")
+    login_button_locator = Locator(by=By.XPATH, value="//a[@title='Login / Register']")
 
     def __init__(self, driver: WebDriver):
         super().__init__(driver=driver)
@@ -21,3 +22,6 @@ class ShopPage(BasePage):
 
     def click_on_view_cart_of_a_product(self) -> None:
         self.click_and_wait(self.cool_bug_view_cart_locator, timeout=15)
+
+    def click_on_login_button(self) -> None:
+        self.click(self.login_button_locator)
