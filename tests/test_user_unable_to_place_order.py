@@ -1,4 +1,4 @@
-import time
+
 
 from test_classes.pages.cart_page import CartPage
 from test_classes.pages.checkout_page import CheckoutPage
