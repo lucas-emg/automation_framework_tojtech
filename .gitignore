@@ -1,4 +1,6 @@
 tojtech-env/
-.idea/
+idea/
+*.iml
+*.xml
 .DS_STORE
 __pycache__
