@@ -24,6 +24,7 @@ class BasePage:
 
     def input(self, locator: Locator, text: str) -> None:
         element = self.driver.find_element(locator.by, locator.value)
+        element.clear()
         element.send_keys(text)
 
     def wait_until_element_is_visible(self, locator: Locator, timeout: int) -> WebElement:
@@ -43,6 +44,6 @@ class BasePage:
         select_element = Select(element)
         select_element.select_by_visible_text(text)
 
-    def scroll_into_view(self, locator: Locator):
+    def scroll_into_view(self, locator: Locator) -> None:
         element = self.find(locator)
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
