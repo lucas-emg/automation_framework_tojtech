@@ -34,6 +34,3 @@ class TestLogin(BaseTest):
         login_page.log_in(username="not_a_user", password="not_a_password")
 
         assert login_page.confirm_error_banner_is_displayed()
-
-    def example_method(self):
-        pass
