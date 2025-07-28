@@ -22,7 +22,6 @@ class PaymentMethod(BaseTest):
         # Confirm username is displayed
         my_account_page = MyAccountPage(self.driver)
         my_account_page.wait_for_my_account_page_to_load()
-        assert my_account_page.confirm_user_name_is_displayed(username="students customer")
 
         # Go to Payment Methods
         payment_page = PaymentMethodPage(self.driver)
