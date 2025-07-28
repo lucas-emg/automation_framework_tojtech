@@ -6,7 +6,7 @@ from test_classes.helpers.locator import Locator
 
 
 class MyAccountPage(BasePage):
-    page_title_locator = Locator(by=By.XPATH, value="//h2[.='My account']")
+    page_title_locator = Locator(by=By.XPATH, value="//h2[.='My Account']")
 
     def wait_for_my_account_page_to_load(self):
         self.wait_until_element_is_visible(self.page_title_locator, timeout=10)
