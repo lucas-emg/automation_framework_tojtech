@@ -14,3 +14,7 @@ class MyAccountPage(BasePage):
     def confirm_user_name_is_displayed(self, username):
         username_locator = f"//p//strong[.='{username}']"
         return self.confirm_element_is_displayed(Locator(by=By.XPATH, value=username_locator))
+
+    def confirm_new_street_address_line_is_displayed(self, street_address):
+        shipping_address_locator = "//div[contains(@class, 'woocommerce-Address')]//address[text()[contains(., '1000 Hollywood Avenue')]]]"
+        return self.confirm_element_is_displayed(Locator(by=By.XPATH, value=shipping_address_locator))
