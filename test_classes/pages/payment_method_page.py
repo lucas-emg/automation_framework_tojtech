@@ -19,16 +19,15 @@ class PaymentMethodPage(BasePage):
         iframe = self.wait_until_element_is_visible(self.credit_debit_card_frame_locator,timeout=10)
         self.driver.switch_to.frame(iframe)
 
-    def add_card_number(self, card, expiry, cvc, zip_code):
-        self.input(self.card_number_field_locator, card)
-        self.input(self.expiration_date_field_locator, expiry)
+    def add_card_number(self, credit_card_number, expiration_date, cvc, zip_code):
+        self.input(self.card_number_field_locator, credit_card_number)
+        self.input(self.expiration_date_field_locator, expiration_date)
         self.input(self.cvc_field_locator, cvc)
         self.input(self.zip_code_field_locator, zip_code)
         self.click(self.add_payment_method_locator)
 
 
     def is_card_added(self):
-        message = self.confirm_element_is_displayed(self.success_message_locator)
-        return 'payment method successfully added' in message
+        return self.confirm_element_is_displayed(self.success_message_locator)
 
 
