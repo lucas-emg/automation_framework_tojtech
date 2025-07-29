@@ -23,7 +23,7 @@ class EditShippingAddressPage(BasePage):
 
     def clear_street_address(self):
         # Clearing the previous input
-        self.find_element(self.address_street_input_locator).clear()
+        self.driver.find_element(self.address_street_input_locator.by, self.address_street_input_locator.value).clear()
 
     def change_street_address(self, street_address):
         # Typing street address into street line 1 field

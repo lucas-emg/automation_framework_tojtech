@@ -41,6 +41,4 @@ class TestEditShippingAddress(BaseTest):
         edit_shipping_address_page.change_street_address(street_address="1000 Hollywood Avenue")
 
         # Confirm the street address line 1 is displayed
-        my_account_page = MyAccountPage(self.driver)
-        my_account_page.wait_for_my_account_page_to_load()
         assert my_account_page.confirm_new_street_address_line_is_displayed(street_address="1000 Hollywood Avenue")
