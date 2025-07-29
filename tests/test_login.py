@@ -8,7 +8,7 @@ from test_classes.pages.my_account_page import MyAccountPage
 
 class TestLogin(BaseTest):
 
-    @pytest.mar.happy_path
+    @pytest.mark.happy_path
     def test_login_correct_credentials(self):
         # Navigates to the Login page
         home_page = HomePage(self.driver)
