@@ -1,5 +1,7 @@
 from selenium.webdriver.common.by import By
+
 from .base_page import BasePage
+
 from test_classes.helpers.locator import Locator
 
 
@@ -32,3 +34,6 @@ class MyAccountPage(BasePage):
 
     def click_on_logout(self):
         self.click(self.logout_link_locator)
+    def confirm_new_street_address_line_is_displayed(self, street_address):
+        shipping_address_locator = f"//div[contains(@class, 'woocommerce-Address')]//address[contains(., '{street_address}')]"
+        return self.confirm_element_is_displayed(Locator(by=By.XPATH, value=shipping_address_locator))
